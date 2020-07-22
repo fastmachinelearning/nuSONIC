@@ -17,6 +17,7 @@ Contents of files:
 
 Plots:
 * plot1: dynamic batching On: [gke-1gpu] vs [gke-4gpu]
+* plot1b: full event time, dyn batch on vs off
 * plot2: gke-4gpu: [dynamic batching On] vs [dynamic batching Off]
 * plot3: gke-4gpu, dynamic batching Off: [small batch size] vs [big batch size]
 * plot4: gke-4gpu: [dynamic batch On, small batch size] vs [dynamic batching Off, big batch size]
