@@ -31,7 +31,7 @@ def model(x, dynbat=False, bigbat=False):
     t_travel = 2.6
     if bigbat: t_travel = 0.38
     t_latency = t_transmit + t_travel
-    t_ideal = (1-p)*t_cpu + t_gpu
+    t_ideal = (1-p)*t_cpu + t_gpu + t_latency
     return (1-p)*t_cpu + t_gpu*(1 + np.maximum(0, x/n_gpu - t_ideal/t_gpu)) + t_latency
 xm = np.arange(0.,310.)
 ym = model(xm)
