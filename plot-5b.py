@@ -19,7 +19,7 @@ ax.set(title="EmTrkMichelId module proc time vs # jobs (GKE-4gpu)", xlabel="numb
 
 #xr=[0.,310.]
 #yr=[219.4,219.4]
-#ax.plot(xr, yr, color='orange',label = "without tRTis",linestyle='solid',linewidth=2)
+#ax.plot(xr, yr, color='orange',label = "without Triton",linestyle='solid',linewidth=2)
 
 ax.legend()
 fig.tight_layout()
