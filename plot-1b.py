@@ -34,5 +34,6 @@ ax.plot(xm, ym, color='purple',label = "model",linestyle='dotted',linewidth=2)
 
 plt.legend(loc='best')
 plt.tight_layout()
+plt.savefig("plot-1b.pdf")
 plt.savefig("plot-1b.png")
 plt.show()
