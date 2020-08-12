@@ -17,7 +17,7 @@ ax.errorbar(d4a[:,0], d4a[:,3], yerr=d4a[:,4]/np.sqrt(d4a[:,0]), fmt='rv--', lin
 ax.errorbar(d4a[:,0], d4a[:,7], yerr=d4a[:,8]/np.sqrt(d4a[:,0]), fmt='bD--', linewidth=0.8,markersize=5.5, markeredgecolor='b', fillstyle='none', capsize=3, label = "Inference Time") #What are cols 5/6? They aren't inf time, assuming (and seems like) 7/8 are
 ax.plot(d4a[:,0], (d4a[:,3]-d4a[:,7]), 'gD--', linewidth=0.8,markersize=5.5, markeredgecolor='g', fillstyle='none', label = "Preprocessing Time")
 
-ax.set(title="EmTrkMichelId time vs # jobs (GKE-4gpu, dyn bat, avg bat sz = 1720)", xlabel="number of simultaneous jobs", ylabel="processing time [seconds]")
+ax.set(title="EmTrkMichelId time vs # jobs (GKE-4gpu, dyn bat, avg bat sz = 1700)", xlabel="number of simultaneous jobs", ylabel="processing time [seconds]")
 
 #xm = np.arange(0.,410.)
 #ym = model(xm,True, False, True)

@@ -15,7 +15,7 @@ ax.set_xlim(0,500)
 ax.set_ylim(0,250)
 ax.grid(True)
 ax.errorbar(d4a[:,0], d4a[:,3], yerr=d4a[:,4]/np.sqrt(d4a[:,0]), fmt='r^--', linewidth=0.8,markersize=7, markeredgecolor='red', fillstyle='none', capsize=3, label = "w/ Triton on GKE-4gpu, avg batch size = 235")
-ax.errorbar(d4b[:,0], d4b[:,3], yerr=d4b[:,4]/np.sqrt(d4b[:,0]), fmt='bD--', linewidth=0.8,markersize=5.5, markeredgecolor='blue', fillstyle='none', capsize=3, label = "w/ Triton on GKE-4gpu, avg batch size = 1720")
+ax.errorbar(d4b[:,0], d4b[:,3], yerr=d4b[:,4]/np.sqrt(d4b[:,0]), fmt='bD--', linewidth=0.8,markersize=5.5, markeredgecolor='blue', fillstyle='none', capsize=3, label = "w/ Triton on GKE-4gpu, avg batch size = 1700")
 ax.set(title="EmTrkMichelId module proc time vs # jobs (GKE-4gpu, no dynamic batching)", xlabel="number of simultaneous jobs", ylabel="processing time [seconds]")
 
 #xr=[0.,310.]
@@ -48,7 +48,7 @@ ax2.set_xlim(0,500)
 ax2.set_ylim(0,350)
 ax2.grid(True)
 ax2.errorbar(d4a[:,0], d4a[:,1], yerr=d4a[:,2]/np.sqrt(d4a[:,0]), fmt='r^--', linewidth=0.8,markersize=7, markeredgecolor='red', fillstyle='none', capsize=3, label = "w/ Triton on GKE-4gpu, avg batch size = 235")
-ax2.errorbar(d4b[:,0], d4b[:,1], yerr=d4b[:,2]/np.sqrt(d4b[:,0]), fmt='bD--', linewidth=0.8,markersize=5.5, markeredgecolor='blue', fillstyle='none', capsize=3, label = "w/ Triton on GKE-4gpu, avg batch size = 1720")
+ax2.errorbar(d4b[:,0], d4b[:,1], yerr=d4b[:,2]/np.sqrt(d4b[:,0]), fmt='bD--', linewidth=0.8,markersize=5.5, markeredgecolor='blue', fillstyle='none', capsize=3, label = "w/ Triton on GKE-4gpu, avg batch size = 1700")
 ax2.set(title="Full Event proc time vs # jobs (GKE-4gpu, no dynamic batching)", xlabel="number of simultaneous jobs", ylabel="processing time [seconds]")
 
 xm = np.arange(0.,500.)
