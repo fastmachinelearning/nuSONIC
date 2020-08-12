@@ -2,6 +2,7 @@ import matplotlib as mpl
 mpl.use('agg')
 import numpy as np
 import matplotlib.pyplot as plt
+from model import model
 
 d4a=np.loadtxt("data/results_rscaletest-gke4_nodybat.txt")
 d4b=np.loadtxt("data/results_rscaletest-gke4.txt")
@@ -21,18 +22,13 @@ yr=[330,330]
 ax.plot(xr, yr, color='orange',label = "CPU-only (w/o Triton)",linestyle='solid',linewidth=2)
 
 # t_sonic = (1-p)t_cpu + t_gpu[1 + max(0, N_cpu / N_gpu - t_ideal / t_gpu)]
-def model(x):
-    n_gpu = 4.
-    t_cpu = 330.
-    p = 0.67
-    t_gpu = 2.5
-    t_ideal = (1-p)*t_cpu + t_gpu
-    return (1-p)*t_cpu + t_gpu*(1 + np.maximum(0, x/n_gpu - t_ideal/t_gpu))
+
 xm = np.arange(0.,310.)
 ym = model(xm)
 ax.plot(xm, ym, color='purple',label = "model",linestyle='dotted',linewidth=2)
 
 plt.legend(loc='best')
 plt.tight_layout()
+plt.savefig("plot-1b.pdf")
 plt.savefig("plot-1b.png")
 plt.show()
